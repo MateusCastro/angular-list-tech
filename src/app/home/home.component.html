@@ -1,0 +1,14 @@
+<app-header title="List of Technologies"></app-header>
+
+<div class="container">
+  <form [formGroup]="techForm" (ngSubmit)="onSubmit(techForm.value)" >
+    <mat-form-field class="example-full-width">
+      <mat-label>New Technology</mat-label>
+      <input matInput placeholder="Ex. Angular" formControlName="name">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Primary</button>
+  </form>
+
+  <p>List of technologies</p>
+  <app-tech-list [techs]="techs"></app-tech-list>
+</div>
